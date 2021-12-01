@@ -12,18 +12,18 @@ echo "Please uncomment the required features as needed."
 # If you already enabled the aks-preview extension before, make sure you are using the latest version
 # If the version is not per the required features, execute update instead of add
 # At the time of writing this, version was 0.4.17
-# az extension update --name aks-preview
+az extension update --name aks-preview
 
 # Enabling Azure Policy for AKS
 # Docs: https://docs.microsoft.com/en-us/azure/governance/policy/concepts/rego-for-aks
 # Register the Azure Policy provider
-# az provider register --namespace Microsoft.PolicyInsights
+az provider register --namespace Microsoft.PolicyInsights
 # Enables installing the add-on
-# az feature register --namespace Microsoft.ContainerService --name AKS-AzurePolicyAutoApprove
+az feature register --namespace Microsoft.ContainerService --name AKS-AzurePolicyAutoApprove
 # Enables the add-on to call the Azure Policy resource provider
-# az feature register --namespace Microsoft.PolicyInsights --name AKS-DataplaneAutoApprove
+az feature register --namespace Microsoft.PolicyInsights --name AKS-DataplaneAutoApprove
 # Once the above shows 'Registered' run the following to propagate the update
-# az provider register -n Microsoft.PolicyInsights
+az provider register -n Microsoft.PolicyInsights
 
 # As the new resource provider takes time (several mins) to register, you can check the status here. Wait for the state to show "Registered"
 az feature list -o table --query "[?contains(name, 'Microsoft.ContainerService/WindowsPreview')].{Name:name,State:properties.state}"
