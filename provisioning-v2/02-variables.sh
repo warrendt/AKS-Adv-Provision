@@ -21,15 +21,15 @@
 # Have a project code (short like 2 or 3 letters)
 # I selected "cap" for crowd-analytics-platform project I worked on
 
-PROJECT_CODE="cap"
+PROJECT_CODE="wadutoit"
 # Set the environment that this deployment represent (dev, qa, prod,...)
 ENVIRONMENT="dev"
 SUBSCRIPTION_CODE="mct"
 
 # Primary location
-LOCATION="westeurope"
+LOCATION="southafricanorth"
 # Location code will be used to setup multi-region resources
-LOCATION_CODE="weu"
+LOCATION_CODE="san"
 
 # Variable file will be used to store the values based on your deployment
 VAR_FILE=$PROJECT_CODE-$ENVIRONMENT-$LOCATION_CODE-$SUBSCRIPTION_CODE.vars
@@ -51,8 +51,8 @@ echo export LOCATION=$LOCATION >> ./$VAR_FILE
 echo export LOCATION_CODE=$LOCATION_CODE >> ./$VAR_FILE
 
 # Azure subscription vars (uncomment if you will supply the values)
-# SUBSCRIPTION_ID="REPLACE"
-# TENANT_ID="REPLACE"
+# SUBSCRIPTION_ID="67c804b9-ad88-40b2-bd28-bc53950682a8"
+# TENANT_ID="72f988bf-86f1-41af-91ab-2d7cd011db47"
 # echo export SUBSCRIPTION_ID=$SUBSCRIPTION_ID >> ./$VAR_FILE
 # echo export TENANT_ID=$TENANT_ID >> ./$VAR_FILE
 
