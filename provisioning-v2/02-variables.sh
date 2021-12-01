@@ -21,10 +21,10 @@
 # Have a project code (short like 2 or 3 letters)
 # I selected "cap" for crowd-analytics-platform project I worked on
 
-PROJECT_CODE="wadutoit"
+PROJECT_CODE="-wdt"
 # Set the environment that this deployment represent (dev, qa, prod,...)
 ENVIRONMENT="dev"
-SUBSCRIPTION_CODE="mct"
+SUBSCRIPTION_CODE="airs"
 
 # Primary location
 LOCATION="southafricanorth"
